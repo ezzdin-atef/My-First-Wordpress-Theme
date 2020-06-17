@@ -1,70 +1,125 @@
-.post {
+.homepage .post {
   margin-top: 40px;
   background-color: #FFF;
   box-shadow: 0 0 20px 6px #00000011;
   border-radius: 3px;
 }
-.post .left {
+.homepage .post .left {
   position: relative;
 }
-.post .left .cats {
+.homepage .post .left .cats {
   position: absolute;
   top: 8px;
   left: 25px;
 }
-.post .left .cats a {
+.homepage .post .left .cats a {
   color: #fff;
   padding: 4px 10px;
   background-color: #007bff;
   border-radius: 3px;
 }
-.post .left img {
+.homepage .post .left img {
   width: 100%;
   height: 100%;
 }
-.post .right {
+.homepage .post .right {
   padding: 0;
 }
-.post .right h3 a {
+.homepage .post .right h3 a {
   color: #333;
   margin: 10px 0;
   display: block;
   font-size: 30px;
 }
-.post .right h3 a:hover {
+.homepage .post .right h3 a:hover {
   color: #007bff;
   text-decoration: none;
 }
-.post .right span {
+.homepage .post .right span {
   margin: 0 15px 5px 0;
   display: inline-block;
 }
-.post .right span, .post .right span i {
+.homepage .post .right span, .homepage .post .right span i {
   color: #333;
 }
-.post .right span a {
+.homepage .post .right span a {
   color: #333;
 }
-.post .right p {
+.homepage .post .right p {
   line-height: 1.7;
   color: #888;
   padding-right: 30px;
   font-size: 16px;
 }
-.post-pagination {
+.homepage .post-pagination {
   margin: 30px 0;
   justify-content: space-between;
 }
-.post-pagination span {
+.homepage .post-pagination span {
   background-color: #333;
   color: #fff;
   padding: 5px 15px;
   margin: 0 10px;
 }
-.post-pagination a {
+.homepage .post-pagination a {
   color: #fff;
 }
-.post-pagination .disabled {
+.homepage .post-pagination .disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/*===========================================*/
+.singlepost .post {
+  margin-top: 40px;
+  background-color: #FFF;
+  /*box-shadow: 0 0 20px 6px #00000011;*/
+  border-radius: 3px;
+}
+.singlepost .post .cats {
+  margin: 10px 0;
+}
+.singlepost .post .cats a {
+  color: #333;
+}
+.singlepost .post {
+  padding: 0;
+}
+.singlepost .post h3 {
+  color: #333;
+  margin: 10px 0;
+  display: block;
+  font-size: 30px;
+}
+.singlepost .post span {
+  margin: 0 15px 5px 0;
+  display: inline-block;
+}
+.singlepost .post span, .singlepost .post span i {
+  color: #333;
+}
+.singlepost .post span a {
+  color: #333;
+}
+.singlepost .post p {
+  line-height: 1.7;
+  color: #888;
+  padding-right: 30px;
+  font-size: 16px;
+}
+.singlepost .post-pagination {
+  margin: 30px 0;
+  justify-content: space-between;
+}
+.singlepost .post-pagination span {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 15px;
+  margin: 0 10px;
+}
+.singlepost .post-pagination a {
+  color: #fff;
+}
+.singlepost .post-pagination .disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }

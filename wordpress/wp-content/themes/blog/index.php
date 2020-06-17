@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container homepage">
   <div class="row">
     <div class="col-9">
       <?php if ( have_posts() ): ?>

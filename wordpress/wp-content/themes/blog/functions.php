@@ -2,6 +2,9 @@
 
   require_once ('class-wp-bootstrap-navwalker.php'); // import navbar walker to use bootstrap menu
 
+  // add thumbnails support to our theme
+  add_theme_support( 'post-thumbnails' );
+
   /*
    * Function to add CSS files
    * Added by @ezzdin 

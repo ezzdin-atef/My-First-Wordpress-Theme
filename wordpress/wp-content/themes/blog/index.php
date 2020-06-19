@@ -10,7 +10,9 @@
             <div class="row">
               <div class="col-4 left">
                 <div class="cats">
-                  <?php the_category( ' ' ) ?>
+                  <?php 
+                    the_category( ' ' ); // function to show the categories of the post
+                  ?>
                 </div>
                 <a href="<?php the_permalink(); ?>">
                   <?php if ( has_post_thumbnail() ): ?>
@@ -22,7 +24,11 @@
               </div>
               <div class="col-8 right">
               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <span><i class="fas fa-user"></i> <?php the_author_posts_link(); ?></span>
+                <span><i class="fas fa-user"></i> 
+                  <?php 
+                    the_author_posts_link(); // the function get the author link with his name too :)
+                  ?>
+                </span>
                 <span><i class="fas fa-comments"></i> <?php comments_popup_link( '0 Comment', '1 Comment', '% Comments', '', 'Comments Disabled' ) ?></span>
                 <span><i class="fas fa-eye"></i> 3150 Watch</span>
                 <div class="lead"><?php the_excerpt(); ?></div>
@@ -37,13 +43,13 @@
       <div class="post-pagination row">
       <?php
 
-      if (get_previous_posts_link()) {
+      if (get_previous_posts_link()) { // chech if there is previous posts or no
         previous_posts_link( '<span class="left"><i class="fas fa-angle-double-left"></i> Prev</span>' );
       } else {
         echo '<span class="left disabled">Prev</span>';
       }
 
-      if (get_next_posts_link()) {
+      if (get_next_posts_link()) { // chech if there is next posts or no
         next_posts_link( '<span class="right">Next <i class="fas fa-angle-double-right"></i></span>' );
       } else {
         echo '<span class="right disabled">Next</span>';

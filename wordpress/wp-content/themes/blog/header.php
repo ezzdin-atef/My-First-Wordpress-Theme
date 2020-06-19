@@ -18,7 +18,9 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <?php navigation_bar() ?>
+          <?php 
+            navigation_bar(); // navigation_bar() is a function from functions.php file
+          ?>
         </div>
       </div>
     </nav>

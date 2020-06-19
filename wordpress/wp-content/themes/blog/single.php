@@ -23,6 +23,34 @@
     <?php endwhile; ?>
 
   <?php endif; ?>
+
+
+  <div class="author-card">
+      <div class="row">
+
+        <div class="col-2 text-center">
+          <?php echo get_avatar(get_the_author_meta('ID'), '145', '', '', array('class' => 'avatar-photo')); ?>
+        </div>
+        <div class="col meta-info">
+          <h4><?php the_author_meta('first_name') ?> <?php the_author_meta('last_name') ?></h4>
+          <p class="lead">
+            <?php
+
+              if (get_the_author_meta('description')) {
+                the_author_meta('description');
+              } else {
+                echo "There is no description";
+              }
+            
+            ?>
+          </p>
+        </div>
+
+      </div>
+      
+      
+  </div>
+
   
   <div class="post-pagination row">
     <?php

@@ -179,3 +179,15 @@
 #cancel-comment-reply-link {
   font-size: 18px;
 }
+
+.author-card {
+  padding: 15px;
+}
+.author-card img {
+  border-radius: 3px;
+}
+.meta-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -161,6 +161,7 @@
 }
 .comment-section li .children li {
   padding: 30px;
+  margin-top: 10px;
   background: #e4e4e4;
 }
 .comment-section li .comment-meta a {
@@ -190,4 +191,47 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.author-page .author-card {
+  background: #f3f3f3;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  border: 1px solid #ddd;
+}
+.counters {
+  margin-top: 10px;
+}
+.counters .card {
+  padding: 15px;
+  font-size: 20px;
+  margin: 0 15px;
+  border: 1px solid #ddd;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+}
+.counters .card span {
+  font-size: 50px;
+}
+.related-posts img {
+  width: 100%;
+  height: 100%;
+}
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+.not-found h2 {
+  font-size: 400px;
+}
+.not-found p {
+  font-size: 40px;
+  font-weight: bold;
+  color: #888;
 }

@@ -77,7 +77,36 @@
 
   add_action( 'init', 'register_custom_menu' );
 
+  /*
+   * Function to create numbering pagination
+   * Added by @ezzdin
+   * 
+  */
 
+  function numbering_pagination() {
+
+    global $wp_query; // make the wp_query global
+
+    $all_pages = $wp_query->max_num_pages; // Get all posts
+
+    $current_page = max(1, get_query_var('paged')); // Get current page
+
+    if ($all_pages > 1) { // Check if total pages more then 1 page
+
+      return paginate_links(array(
+        'base' => get_pagenum_link() . '%_%',
+        'format' => 'page/%#%',
+        'current' => $current_page
+      ));
+      /** There is nice property on paginate_links() function like:
+       * mid_size
+       * end_size
+       * to understand it you can watch elzero course video [95] 
+      */
+
+    }
+
+  }
 
 
 

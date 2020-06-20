@@ -41,23 +41,28 @@
       <?php endif; ?>
       
       <div class="post-pagination row">
+        <?php
+
+        if (get_previous_posts_link()) { // chech if there is previous posts or no
+          previous_posts_link( '<span class="left"><i class="fas fa-angle-double-left"></i> Prev</span>' );
+        } else {
+          echo '<span class="left disabled">Prev</span>';
+        }
+
+        if (get_next_posts_link()) { // chech if there is next posts or no
+          next_posts_link( '<span class="right">Next <i class="fas fa-angle-double-right"></i></span>' );
+        } else {
+          echo '<span class="right disabled">Next</span>';
+        }
+
+        ?>
+      </div>
       <?php
 
-      if (get_previous_posts_link()) { // chech if there is previous posts or no
-        previous_posts_link( '<span class="left"><i class="fas fa-angle-double-left"></i> Prev</span>' );
-      } else {
-        echo '<span class="left disabled">Prev</span>';
-      }
-
-      if (get_next_posts_link()) { // chech if there is next posts or no
-        next_posts_link( '<span class="right">Next <i class="fas fa-angle-double-right"></i></span>' );
-      } else {
-        echo '<span class="right disabled">Next</span>';
-      }
+        // The next line is the other kind of pagination [numbering pagination] :)
+        // echo numbering_pagination();
 
       ?>
-
-      </div>
     </div>
     <div class="col-3"></div>
   </div>

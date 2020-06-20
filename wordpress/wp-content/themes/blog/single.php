@@ -26,6 +26,7 @@
       <div class="row">
 
         <div class="col-2 text-center">
+          <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
           <?php 
 
             /*
@@ -39,6 +40,7 @@
             ));
             
           ?>
+          </a>
         </div>
         <div class="col meta-info">
           <h4><?php the_author_meta('first_name') ?> <?php the_author_meta('last_name') ?></h4>
@@ -59,7 +61,38 @@
       
       
   </div>
+  <?php
+    $cats = array();
+    foreach(get_the_category(get_the_ID()) as $cat) {
+      array_push($cats, $cat->term_id);
+    }
+    
+    $related_posts_args = array(
+      'post__not_in' => array(get_the_ID()), // get_queried_object_id() function is also function will return the post ID [Elzero used it] but you should write array(get_queried_object_id())
+      'category__in' => $cats, // wp_get_post_categories() function is used to return the categories ID directily
+      'posts_per_page' => 3,
+      'orderby' => 'rand'
+    );
 
+    $related_posts = new WP_Query($related_posts_args);
+
+  ?>
+  <div class="row">
+    <?php if ($related_posts->have_posts()): ?>
+    <?php while($related_posts->have_posts()): ?>
+    <?php $related_posts->the_post(); ?>
+    <div class="col-4">
+      <div class="card related-posts">
+        <?php the_post_thumbnail(); ?>
+        <div class="card-body">
+          <h5 class="card-title"><?php the_title(); ?></h5>
+          <a href="<?php the_permalink() ?>" class="btn btn-primary">Open</a>
+        </div>
+      </div>
+    </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
+  </div>
   
   <div class="post-pagination row">
     <?php

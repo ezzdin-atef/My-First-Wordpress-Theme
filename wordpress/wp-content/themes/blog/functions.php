@@ -109,6 +109,23 @@
   }
 
 
+  // Resgister sidebar
 
+  function blog_sidebar() {
+    // main sidebar
+    register_sidebar(array(
+      'name' => 'main sidebar',
+      'id' => 'main-sidebar',
+      'description' => 'The Main Sidebar',
+      'class' => 'main-sidebar',
+      'before_widget' => '<div class="widget-content">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-heading">',
+      'after_title' => '</h3>'
+    ));
+  }
+
+
+  add_action('widgets_init', 'blog_sidebar');
 
 ?>

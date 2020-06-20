@@ -92,6 +92,7 @@
     </div>
     <?php endwhile; ?>
     <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
   </div>
   
   <div class="post-pagination row">

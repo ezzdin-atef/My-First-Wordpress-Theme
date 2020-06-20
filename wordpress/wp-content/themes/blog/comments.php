@@ -1,6 +1,12 @@
 <?php
 
-  if (comments_open()) { // Check whither the comments are enables or not
+  /**
+   * to make the author have DISTINCT comments style
+   * you can use the class [bypostauthor] and style it with css
+   * 
+   */
+
+  if (comment_open()) { // Check whither the comments are enables or not
     echo "<h3 class='comments-heading'>";
       comments_number(); // get the comments number
     echo "</h3>";

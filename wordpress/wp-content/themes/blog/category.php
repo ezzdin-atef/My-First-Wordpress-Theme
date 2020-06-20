@@ -66,9 +66,7 @@
     </div>
     <div class="col-3">
       <?php
-        if (is_active_sidebar('main-sidebar')) { // check if this sidebar is active or not
-          dynamic_sidebar('main-sidebar'); // call the sidebar by the ID
-        }
+        get_sidebar(); // call the sidebar.php file
       ?>
     </div>
   </div>

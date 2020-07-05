@@ -5,11 +5,11 @@
 # Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /My-First-Wordpress-Theme/wordpress/
+RewriteBase /blog-theme/wordpress/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /My-First-Wordpress-Theme/wordpress/index.php [L]
+RewriteRule . /blog-theme/wordpress/index.php [L]
 </IfModule>
 
 # END WordPress
